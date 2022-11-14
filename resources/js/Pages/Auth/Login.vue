@@ -35,6 +35,10 @@ const loginWithGoogle = () => {
 const loginWithFacebook = () => {
     window.location.href = '/auth/facebook/redirect';
 };
+
+const loginWithTwitter = () => {
+    window.location.href = '/auth/twitter/redirect';
+};
 </script>
 
 <template>
@@ -58,6 +62,12 @@ const loginWithFacebook = () => {
         <div>
             <PrimaryButton @click="loginWithFacebook" class="w-full my-3" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                 <span class="mx-auto">Se connecter avec Facebook</span>
+                </PrimaryButton>
+        </div>
+
+        <div>
+            <PrimaryButton @click="loginWithTwitter" class="w-full my-3" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <span class="mx-auto">Se connecter avec Twitter</span>
                 </PrimaryButton>
         </div>
 

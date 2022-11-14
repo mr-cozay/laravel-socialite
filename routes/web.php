@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\FacebookController;
 use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\Auth\TwitterController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -40,3 +41,6 @@ Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallb
 
 Route::get('/auth/facebook/redirect', [FacebookController::class, 'handleFacebookRedirect']);
 Route::get('/auth/facebook/callback', [FacebookController::class, 'handleFacebookCallback']);
+
+Route::get('/auth/twitter/redirect', [TwitterController::class, 'handleTwitterRedirect']);
+Route::get('/auth/twitter/callback', [TwitterController::class, 'handleTwitterCallback']);
